@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nmap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<nav> ...same nav... </nav>
+
+<h1>Nmap</h1>
+
+<p>
+Nmap is a tool used to scan networks and discover devices and services.
+</p>
+
+<p>
+Ports are like doors on a computer. Each open port shows a service running.
+Knowing open ports helps find possible weaknesses.
+</p>
+
+<pre>
+nmap -sV 192.168.1.0/24
+</pre>
+
+<pre>
+22/tcp open ssh
+80/tcp open http
+</pre>
+
+<p>
+Port 22 means SSH is running. Port 80 means a website is running.
+A tester uses this to decide what to investigate next.
+</p>
+
+</body>
+</html>
