@@ -21,20 +21,54 @@
 
     <button onclick="toggleMode()">🌙</button>
 </nav>
+
+<div class="container">
+
 <h1>Wireshark</h1>
 
-<p>
-A packet is a small piece of data sent over a network, like a message in an envelope.
-</p>
+<div class="card">
+    <p>
+        Wireshark is a tool used to capture and analyze network traffic in real time.
+        It allows security testers to see what data is being sent between devices.
+    </p>
+</div>
 
-<p>
-Wireshark captures these packets and lets you see what is being sent.
-</p>
+<div class="card">
+    <h2>What is a Packet?</h2>
+    <p>
+        A packet is a small piece of data sent over a network. You can think of it
+        like an envelope that carries information from one computer to another.
+    </p>
+</div>
 
-<p>
-If a login form uses HTTP instead of HTTPS, Wireshark can show usernames
-and passwords in plain text. This is a serious security risk.
-</p>
+<div class="card">
+    <h2>What Wireshark Shows</h2>
+    <p>
+        Wireshark captures packets and breaks them down so you can see details like
+        source, destination, and the type of data being sent.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Security Example</h2>
+    <p>
+        If a website uses HTTP instead of HTTPS, login data is not encrypted.
+        Wireshark can reveal usernames and passwords in plain text, which is a
+        major security risk.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Why It Matters in Cybersecurity</h2>
+    <p>
+        Security testers use Wireshark to detect unsafe traffic, misconfigured
+        services, and potential data leaks on a network.
+    </p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
