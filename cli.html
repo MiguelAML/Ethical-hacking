@@ -20,28 +20,43 @@
     </div>
 
     <button onclick="toggleMode()">🌙</button>
-</nav> 
+</nav>
+
+<div class="container">
+
 <h1>Command Line Interface (CLI)</h1>
 
-<p>
-The CLI is a way to control a computer by typing commands instead of clicking.
-Unlike a graphical interface, it gives direct control over the system.
-</p>
+<div class="card">
+    <p>
+        The CLI (Command Line Interface) is a way to control a computer by typing
+        commands instead of clicking buttons. It gives direct access to the system.
+    </p>
+</div>
 
-<p>
-Security professionals prefer CLI because it is faster, more precise,
-and works remotely over networks.
-</p>
+<div class="card">
+    <h2>Why Security Professionals Use It</h2>
+    <p>
+        Security professionals prefer the CLI because it is faster, more precise,
+        and works over remote connections. It also allows automation using scripts.
+    </p>
+</div>
 
-<pre>
+<div class="card">
+    <h2>Example Command</h2>
+    <pre>
 cd /etc
 ls -la
-</pre>
+    </pre>
+    <p>
+        This command moves into a system directory and lists all files, including
+        hidden ones. During a penetration test, this helps quickly explore a system
+        and find important files.
+    </p>
+</div>
 
-<p>
-This command moves into a system folder and lists all files, including hidden ones.
-This helps a tester quickly explore a system during an investigation.
-</p>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
