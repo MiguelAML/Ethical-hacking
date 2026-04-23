@@ -21,26 +21,64 @@
 
     <button onclick="toggleMode()">🌙</button>
 </nav>
+
+<div class="container">
+
 <h1>SSH (Secure Shell)</h1>
 
-<p>
-SSH allows secure remote access to another computer over a network.
-Before SSH, tools like Telnet sent data in plain text, which was unsafe.
-</p>
+<div class="card">
+    <p>
+        SSH is a protocol that allows secure remote access to another computer
+        over a network. It encrypts the connection so data cannot be easily
+        intercepted.
+    </p>
+</div>
 
-<p>
-Once connected, you can control the remote system like you are sitting in front of it.
-</p>
+<div class="card">
+    <h2>Why SSH Is Important</h2>
+    <p>
+        Before SSH, tools like Telnet sent data in plain text, which meant
+        usernames and passwords could be captured. SSH solves this by encrypting
+        everything being sent.
+    </p>
+</div>
 
-<pre>
+<div class="card">
+    <h2>What You Can Do With SSH</h2>
+    <p>
+        Once connected, you can control the remote system like you are sitting
+        in front of it. This includes running commands, accessing files, and
+        managing the system.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Example Command</h2>
+    <pre>
 ssh student@192.168.1.100
-</pre>
+    </pre>
+</div>
 
-<p>
-student = username<br>
-192.168.1.100 = target IP address<br>
-ssh = protocol used to connect securely
-</p>
+<div class="card">
+    <h2>Command Breakdown</h2>
+    <p>
+        ssh = the protocol used to connect securely<br>
+        student = the username on the target system<br>
+        192.168.1.100 = the IP address of the target device
+    </p>
+</div>
+
+<div class="card">
+    <h2>Real-World Example</h2>
+    <p>
+        In a lab, a tester might first use Nmap to find a device on the network,
+        then use SSH to connect to it and investigate the system further.
+    </p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
