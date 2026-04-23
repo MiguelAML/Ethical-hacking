@@ -10,3 +10,6 @@ function typeWriter() {
 }
 
 typeWriter();
+function toggleMode() {
+    document.body.classList.toggle("light");
+}
