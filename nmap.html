@@ -21,30 +21,59 @@
 
     <button onclick="toggleMode()">🌙</button>
 </nav>
-<h1>Nmap</h1>
 
-<p>
-Nmap is a tool used to scan networks and discover devices and services.
-</p>
+<div class="container">
 
-<p>
-Ports are like doors on a computer. Each open port shows a service running.
-Knowing open ports helps find possible weaknesses.
-</p>
+<h1>Nmap (Network Mapper)</h1>
 
-<pre>
+<div class="card">
+    <p>
+        Nmap is a tool used to scan networks and discover devices and services.
+        Network scanning means checking what systems are online and what they are running.
+    </p>
+</div>
+
+<div class="card">
+    <h2>What Are Ports?</h2>
+    <p>
+        Ports are like doors on a computer. Each open port shows a service running,
+        such as a website or remote login. Knowing which ports are open helps a
+        security tester find possible entry points.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Example Command</h2>
+    <pre>
 nmap -sV 192.168.1.0/24
-</pre>
+    </pre>
+    <p>
+        -sV = detects service versions<br>
+        192.168.1.0/24 = scans all devices on the network
+    </p>
+</div>
 
-<pre>
-22/tcp open ssh
-80/tcp open http
-</pre>
+<div class="card">
+    <h2>Sample Output</h2>
+    <pre>
+22/tcp   open   ssh
+80/tcp   open   http
+3306/tcp open   mysql
+    </pre>
+</div>
 
-<p>
-Port 22 means SSH is running. Port 80 means a website is running.
-A tester uses this to decide what to investigate next.
-</p>
+<div class="card">
+    <h2>What the Results Mean</h2>
+    <p>
+        Port 22 shows SSH is running, which allows remote access. Port 80 shows
+        a web server. Port 3306 means a database is exposed on the network.
+        A tester would investigate these services to check for weaknesses.
+    </p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
