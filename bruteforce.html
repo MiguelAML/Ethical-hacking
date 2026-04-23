@@ -22,31 +22,53 @@
     <button onclick="toggleMode()">🌙</button>
 </nav>
 
+<div class="container">
+
 <h1>Brute-Force Attacks</h1>
 
-<p>
-A brute-force attack tries every possible password until one works.
-</p>
+<div class="card">
+    <p>
+        A brute-force attack is when someone tries every possible password
+        until one works. It is a method, not a single tool.
+    </p>
+</div>
 
-<p>
-A dictionary attack uses a list of common passwords instead.
-</p>
+<div class="card">
+    <h2>Brute Force vs Dictionary Attack</h2>
+    <p>
+        A brute-force attack tests all combinations, which can take a long time.
+        A dictionary attack is faster because it uses a list of common passwords.
+    </p>
+</div>
 
-<p>
-In a pentest, a tester may use this to check if accounts have weak passwords.
-</p>
+<div class="card">
+    <h2>Example in a Pentest</h2>
+    <p>
+        During a penetration test, a tester might try logging into an account
+        using many password attempts to see if weak passwords are allowed.
+        If access is gained, it shows a serious security issue.
+    </p>
+</div>
 
-<h2>Defenses</h2>
-<ul>
-    <li>Account lockouts</li>
-    <li>Rate limiting</li>
-    <li>Multi-factor authentication</li>
-</ul>
+<div class="card">
+    <h2>Defenses</h2>
+    <ul>
+        <li>Account lockouts after too many failed attempts</li>
+        <li>Rate limiting to slow down login attempts</li>
+        <li>Multi-factor authentication (extra verification step)</li>
+    </ul>
+</div>
 
-<p>
-A finding would say: weak password allowed access. The fix is stronger passwords
-and login protections.
-</p>
+<div class="card">
+    <h2>Security Finding</h2>
+    <p>
+        A tester would report that weak passwords allow unauthorized access.
+        The recommendation would be stronger passwords and protections like MFA.
+    </p>
+</div>
+
+</div>
+    <script src="script.js"></script>
 
 </body>
 </html>
