@@ -21,35 +21,75 @@
 
     <button onclick="toggleMode()">🌙</button>
 </nav>
+
+<div class="container">
+
 <h1>Hydra</h1>
 
-<p>
-Hydra is a tool used to test usernames and passwords automatically.
-</p>
+<div class="card">
+    <p>
+        Hydra is a tool used to test login systems by trying many username
+        and password combinations automatically. It is used by security testers
+        to find weak credentials.
+    </p>
+</div>
 
-<p>
-A wordlist is a file with many possible passwords. Hydra tries each one.
-</p>
+<div class="card">
+    <h2>Wordlists</h2>
+    <p>
+        A wordlist is a file that contains many possible passwords. Hydra reads
+        the list and tries each password until one works or the list ends.
+    </p>
+</div>
 
-<pre>
+<div class="card">
+    <h2>Example Command</h2>
+    <pre>
 hydra -l admin -P rockyou.txt ssh://192.168.1.50
-</pre>
+    </pre>
+    <p>
+        -l admin = the username being tested<br>
+        -P rockyou.txt = list of passwords to try<br>
+        ssh://192.168.1.50 = the service and target system
+    </p>
+</div>
 
-<p>
--l admin = username<br>
--P = password list<br>
-ssh:// = protocol and target
-</p>
+<div class="card">
+    <h2>Example Result</h2>
+    <pre>
+[22][ssh] host: 192.168.1.50  login: admin  password: password123
+    </pre>
+    <p>
+        This means the tool found a working password. A tester would report
+        this as a serious security issue.
+    </p>
+</div>
 
-<h2>Ethics</h2>
-<p>
-Running Hydra without permission is illegal because it is an attack.
-Ethical hackers only use it in authorized tests.
-</p>
+<div class="card">
+    <h2>Ethics and Responsibility</h2>
+    <p>
+        Using Hydra without permission is illegal because it is an unauthorized
+        attempt to break into a system. This can violate computer crime laws
+        and lead to serious consequences.
+    </p>
+    <p>
+        Ethical hackers only use tools like Hydra when they have clear
+        authorization from the system owner.
+    </p>
+</div>
 
-<p>
-Defenses include account lockouts, rate limiting, and multi-factor authentication.
-</p>
+<div class="card">
+    <h2>Defenses Against Attacks</h2>
+    <ul>
+        <li>Account lockouts after too many failed login attempts</li>
+        <li>Rate limiting to slow down repeated attempts</li>
+        <li>Multi-factor authentication (MFA)</li>
+    </ul>
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
