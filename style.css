@@ -1,25 +1,33 @@
 /* =========================
-   BASE THEME VARIABLES
+   THEME VARIABLES (PRO LEVEL)
 ========================= */
 :root {
-    --bg: #0b1220;
-    --card: #111827;
-    --text: #e5e7eb;
-    --accent: #3b82f6;
-    --border: #1f2937;
+    --bg: #0a0f1c;
+    --card: rgba(15, 23, 42, 0.75);
+    --text: #e2e8f0;
+
+    --accent: #0ea5e9;
+    --accent2: #22c55e;
+    --accent-glow: rgba(14, 165, 233, 0.35);
+
+    --border: rgba(255, 255, 255, 0.06);
 }
 
 /* LIGHT MODE */
 body.light {
-    --bg: #f9fafb;
-    --card: #ffffff;
-    --text: #111827;
-    --accent: #2563eb;
-    --border: #e5e7eb;
+    --bg: #f8fafc;
+    --card: rgba(255, 255, 255, 0.9);
+    --text: #0f172a;
+
+    --accent: #0284c7;
+    --accent2: #16a34a;
+    --accent-glow: rgba(2, 132, 199, 0.25);
+
+    --border: rgba(0, 0, 0, 0.08);
 }
 
 /* =========================
-   GLOBAL STYLES
+   GLOBAL
 ========================= */
 * {
     box-sizing: border-box;
@@ -28,9 +36,9 @@ body.light {
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, sans-serif;
-    background: var(--bg);
+    background: radial-gradient(circle at top, #111827, var(--bg));
     color: var(--text);
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /* =========================
@@ -41,6 +49,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
+    backdrop-filter: blur(10px);
     background: var(--card);
     border-bottom: 1px solid var(--border);
     position: sticky;
@@ -48,23 +57,43 @@ nav {
     z-index: 1000;
 }
 
+nav strong {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* NAV LINKS */
 .nav-links a {
-    margin: 0 10px;
+    margin: 0 12px;
     text-decoration: none;
     color: var(--text);
     font-weight: 500;
+    position: relative;
+    transition: 0.2s;
 }
 
-.nav-links a:hover {
-    color: var(--accent);
+/* underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--accent);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* =========================
-   PAGE LAYOUT
+   LAYOUT
 ========================= */
 .container {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 50px auto;
     padding: 20px;
 }
 
@@ -72,30 +101,39 @@ nav {
    TYPOGRAPHY
 ========================= */
 h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-bottom: 10px;
+    letter-spacing: 0.5px;
 }
 
 h2 {
-    margin-top: 30px;
+    margin-top: 25px;
     color: var(--accent);
+    font-size: 1.25rem;
+}
+
+p {
+    line-height: 1.6;
 }
 
 /* =========================
-   CARDS
+   CARDS (GLASS + ACCENT)
 ========================= */
 .card {
     background: var(--card);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 22px;
+    border-radius: 12px;
     margin-top: 20px;
     border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
     line-height: 1.6;
-    transition: 0.2s ease;
+    backdrop-filter: blur(12px);
+    transition: all 0.25s ease;
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px var(--accent-glow);
 }
 
 /* =========================
@@ -107,6 +145,7 @@ pre {
     padding: 15px;
     border-radius: 8px;
     overflow-x: auto;
+    border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 /* =========================
@@ -125,11 +164,28 @@ button {
 
 button:hover {
     transform: scale(1.05);
-    opacity: 0.95;
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   TYPEWRITER TEXT
+========================= */
+#typewriter {
+    font-family: monospace;
+    color: var(--accent);
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   LINKS
+========================= */
+a:hover {
+    color: var(--accent2);
+}
+
+/* =========================
+   MOBILE
 ========================= */
 @media (max-width: 700px) {
     nav {
@@ -142,5 +198,9 @@ button:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
